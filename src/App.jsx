@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <div>
+      <p>My test auto deploy</p>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
