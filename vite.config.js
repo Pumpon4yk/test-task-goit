@@ -5,11 +5,11 @@ export default defineConfig({
   plugins: [react()],
   base: "/test-task-goit/",
   server: {
-    open: './',
+//     open: './',
     port: 8888,
   },
   preview: {
-    open: './',
+//     open: './',
     port: 8080,
   },
 })
