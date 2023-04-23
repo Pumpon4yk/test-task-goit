@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import Tweet from '../Tweet/Tweet';
-import { Item, List } from './TweetsList.styled';
+import { List } from './TweetsList.styled';
 import { getFollowingLocal, setFollowingLocal } from '../../utils/local-stor';
 
 const TweetsList = ({ users, allTweets, curentParam }) => {
@@ -50,13 +50,13 @@ const TweetsList = ({ users, allTweets, curentParam }) => {
     followStatusAll.length > 0 && (
       <List>
         {viewUsers().map(user => (
-          <Item key={user.id}>
+          <li key={user.id}>
             <Tweet
               user={user}
               followStatus={followStatusAll.filter(e => e.id === user.id)[0]}
               togglStatus={togglStatus}
             />
-          </Item>
+          </li>
         ))}
       </List>
     )

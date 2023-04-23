@@ -9,7 +9,3 @@ align-items: : center;
 gap: 30px;
 padding: 0;
 `
-
-export const Item =styled.li`
-
-`

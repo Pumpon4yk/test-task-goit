@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Card = styled.div`
 position: relative;
 width: 308px;
@@ -55,11 +54,6 @@ export const Avatar = styled.img`
 width: 100%;
 `
 
-export const ContainerData = styled.div`
-
-
-`
-
 
 export const Text = styled.p`
 font-weight: 500;
@@ -76,10 +70,4 @@ color: #EBD8FF;
 :nth-child(2) {
   margin-bottom: 26px;
 }
-
-`
-
-export const Data = styled.span`
-
-
 `

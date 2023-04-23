@@ -42,4 +42,4 @@ export const Select = styled(Dropdown)`
     background-color: #ebd8ff;
     color: #5736a3;
   }
-`
+`;

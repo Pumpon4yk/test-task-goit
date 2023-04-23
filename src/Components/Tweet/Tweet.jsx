@@ -5,8 +5,6 @@ import {
   Avatar,
   Card,
   ContainerAvatar,
-  ContainerData,
-  Data,
   GoItIcon,
   ImgTweets,
   LineCenter,
@@ -23,8 +21,6 @@ const Tweet = ({ user, followStatus, togglStatus }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [statusUsert, setStatusUsert] = useState(followStatus);
 
-
-
   const handleFollowToggle = () => {
     setIsLoading(true);
     setStatusUsert(({ id, status }) => ({ id, status: !status }));
@@ -34,16 +30,15 @@ const Tweet = ({ user, followStatus, togglStatus }) => {
 
       setUserFollower(userr.id, newUserObj)
         .then(res => {
-          setUsserr(res)
+          setUsserr(res);
 
-          togglStatus({ id: statusUsert.id, status: !statusUsert.status })
+          togglStatus({ id: statusUsert.id, status: !statusUsert.status });
         })
         .catch(err => {
-          toast.error("Sorry, an error occurred.",
-          {
+          toast.error('Sorry, an error occurred.', {
             duration: 2000,
-          })
-          setStatusUsert(({ id, status }) => ({ id, status: !status }))
+          });
+          setStatusUsert(({ id, status }) => ({ id, status: !status }));
         })
         .finally(() => setIsLoading(false));
     }
@@ -53,15 +48,14 @@ const Tweet = ({ user, followStatus, togglStatus }) => {
 
       setUserFollower(userr.id, newUserObj)
         .then(res => {
-          setUsserr(res)
-          togglStatus({ id: statusUsert.id, status: !statusUsert.status })
+          setUsserr(res);
+          togglStatus({ id: statusUsert.id, status: !statusUsert.status });
         })
         .catch(err => {
-          toast.error("Sorry, an error occurred.",
-          {
+          toast.error('Sorry, an error occurred.', {
             duration: 2000,
-          })
-          setStatusUsert(({ id, status }) => ({ id, status: !status }))
+          });
+          setStatusUsert(({ id, status }) => ({ id, status: !status }));
         })
         .finally(() => setIsLoading(false));
     }
@@ -75,16 +69,16 @@ const Tweet = ({ user, followStatus, togglStatus }) => {
       <ContainerAvatar>
         <Avatar src={userr.avatar} />
       </ContainerAvatar>
-      <ContainerData>
+      <div>
         <Text>
-          <Data>{userr.tweets.toLocaleString()} </Data>
+          <span>{userr.tweets.toLocaleString()} </span>
           Tweets
         </Text>
         <Text>
-          <Data>{userr.followers.toLocaleString()} </Data>
+          <span>{userr.followers.toLocaleString()} </span>
           Folowers
         </Text>
-      </ContainerData>
+      </div>
       <Button
         onClick={handleFollowToggle}
         followToggle={statusUsert.status}
