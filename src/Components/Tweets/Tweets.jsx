@@ -8,7 +8,7 @@ const options = ['All', 'Follow', 'Followings'];
 
 const defaultOption = options[0];
 
-const Tweets = ({ page, setPage, ...parameter }) => {
+const Tweets = ({ page, setPage, endData, ...parameter }) => {
   const [curentParam, setCurentParam] = useState(defaultOption);
 
   return (
@@ -21,7 +21,7 @@ const Tweets = ({ page, setPage, ...parameter }) => {
       />
 
       <TweetsList {...parameter} curentParam={curentParam} />
-      {page !== 2 && <ButtonLoadmMore setPage={setPage} />}
+      {!endData && <ButtonLoadmMore setPage={setPage} />}
     </Container>
   );
 };

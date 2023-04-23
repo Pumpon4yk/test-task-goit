@@ -9,6 +9,8 @@ const TweetsPage = () => {
   const [error, setError] = useState('');
   const [page, setPage] = useState(1);
 
+  const endData = users.length === usersPage.length;
+
   useEffect(() => {
     getUsers()
       .then(res => setUsers(res))
@@ -41,6 +43,7 @@ const TweetsPage = () => {
             setPage={setPage}
             users={usersPage}
             allTweets={users}
+            endData={endData}
           />
         )
       )}
