@@ -4,7 +4,7 @@ Tweets App
 
 React test-task-goit
 
-Цей проєкт створений за допомогою ![vite](./public/vite.png) Vite
+Цей проєкт створений за допомогою ![vite](./public/vite.svg) Vite
 https://vitejs.dev/ .
 
 Настроєний для автоматичного депроя на Github Pages.
