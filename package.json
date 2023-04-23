@@ -1,6 +1,7 @@
 {
   "name": "test-task-goit",
   "private": true,
+  "homepage": "https://Pumpon4yk.github.io/test-task-goit/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
