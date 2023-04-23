@@ -5,11 +5,11 @@ export default defineConfig({
   plugins: [react()],
   base: "./",
   server: {
-    open: './index.html',
+    open: './',
     port: 8888,
   },
   preview: {
-    open: './index.html',
+    open: './',
     port: 8080,
   },
 })
